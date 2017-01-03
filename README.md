@@ -11,9 +11,9 @@ comming soon...<br/>
 	* Gtk+: [zenity](https://help.gnome.org/users/zenity/stable/)
 	* KDE: [kdialog](https://techbase.kde.org/Development/Tutorials/Shell_Scripting_with_KDE_Dialogs)
 * Web
-	* Flash and HTML5: [FileReference](http://api.openfl.org/openfl/net/FileReference.html) and [FileFilter](http://api.openfl.org/openfl/net/FileFilter.html)
+	* Flash and HTML5: [openfl:FileReference](http://api.openfl.org/openfl/net/FileReference.html) and [openfl:FileFilter](http://api.openfl.org/openfl/net/FileFilter.html)
 * Windows
-	* Metro: [zenity](https://github.com/kvaps/zenity-windows)
+	* Metro: [zenity](https://github.com/kvaps/zenity-windows/)
 * Android
 	* ???
 
