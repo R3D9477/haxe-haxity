@@ -1,7 +1,7 @@
-haxe-libmodbus
+Haxity
 =========================
 
-Library for building native dialogs.<br/>
+Haxe-library for building native dialogs.<br/>
 comming soon...<br/>
 
 ###Haxity uses:<br/>
@@ -18,4 +18,4 @@ comming soon...<br/>
 	* ???
 
 ### Install:<br/>
-`haxelib git libmodbus https://github.com/r3d9u11/haxe-libmodbus.git`
+`haxelib git haxity https://github.com/r3d9u11/haxe-haxity.git`
