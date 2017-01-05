@@ -31,8 +31,7 @@ class DESwitcher {
 						DESwitcher.currentDesktop = DEType.Unknown;
 				}
 			case "windows":
-				Zenity.zenityPath = Path.join([Sys.getEnv(SysHelper.getCpuArch() == 32 ? "programfiles" : "programfiles(x86)").replace("\\", "/"), "Zenity", "bin", "zenity.exe"]);
-				DESwitcher.currentDesktop = DEType.Zenity;
+				DESwitcher.currentDesktop = DEType.HaxeSystools;
 			default:
 				DESwitcher.currentDesktop = DEType.Unknown;
 		}
