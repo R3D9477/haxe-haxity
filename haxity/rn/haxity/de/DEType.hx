@@ -5,5 +5,6 @@ enum DEType {
 	Zenity;
 	Dialog;
 	Kdialog;
+	HaxeSystools;
 	Unknown;
 }
