@@ -53,6 +53,19 @@ class Zenity {
 		return res == "0";
 	}
 	
+	public static function saveFile (title:String) : String
+		return new Process(Zenity.zenityPath, [
+			"--file-selection",
+			'--title="$title"',
+			"--save"
+		]).stdout.readAll().toString();
+	
+	public static function openFile (title:String) : String
+		return new Process(Zenity.zenityPath, [
+			"--file-selection",
+			'--title="$title"'
+		]).stdout.readAll().toString().trim();
+	
 	public static function openFiles (title:String, separator:String) : Array<String>
 		return new Process(Zenity.zenityPath, [
 			"--file-selection",
@@ -61,18 +74,20 @@ class Zenity {
 			separator > "" ? '--separator="$separator"' : ""
 		]).stdout.readAll().toString().split(separator > "" ? separator : "|").map(function (f:String) return f.trim());
 	
-	public static function openFile (title:String) : String
-		return new Process(Zenity.zenityPath, [
-			"--file-selection",
-			'--title="$title"'
-		]).stdout.readAll().toString().trim();
-	
-	public static function saveFile (title:String) : String
+	public static function saveDirectory (title:String) : String
 		return new Process(Zenity.zenityPath, [
 			"--file-selection",
 			'--title="$title"',
+			"--directory",
 			"--save"
 		]).stdout.readAll().toString();
+		
+	public static function openDirectory (title:String) : String
+		return new Process(Zenity.zenityPath, [
+			"--file-selection",
+			"--directory",
+			'--title="$title"'
+		]).stdout.readAll().toString().trim();
 	
 	public static function openDirectories (title:String, separator:String) : Array<String>
 		return new Process(Zenity.zenityPath, [
@@ -82,19 +97,4 @@ class Zenity {
 			'--title="$title"',
 			separator > "" ? '--separator="$separator"' : ""
 		]).stdout.readAll().toString().split(separator > "" ? separator : "|").map(function (f:String) return f.trim());
-	
-	public static function openDirectory (title:String) : String
-		return new Process(Zenity.zenityPath, [
-			"--file-selection",
-			"--directory",
-			'--title="$title"'
-		]).stdout.readAll().toString().trim();
-	
-	public static function saveDirectory (title:String) : String
-		return new Process(Zenity.zenityPath, [
-			"--file-selection",
-			'--title="$title"',
-			"--directory",
-			"--save"
-		]).stdout.readAll().toString();
 }

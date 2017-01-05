@@ -15,15 +15,21 @@ class Haxity {
 	public static function question (title:String, text:String, noWrap:Bool = false, timeout:Int = 0) : Bool
 		return DESwitcher.callDialog(DialogType.question, [title, text, noWrap, timeout]);
 	
-	public static function openFiles (title:String, multiple:Bool = false, separator:String = null) : Array<String>
-		return DESwitcher.callDialog(DialogType.openFiles, [title, multiple, separator]);
-	
 	public static function saveFile (title:String) : String
 		return DESwitcher.callDialog(DialogType.saveFile, [title]);
 	
-	public static function openDirectories (title:String, multiple:Bool = false, separator:String = null) : Array<String>
-		return DESwitcher.callDialog(DialogType.openDirectories, [title, multiple, separator]);
+	public static function openFile (title:String) : String
+		return DESwitcher.callDialog(DialogType.openFiles, [title]);
+	
+	public static function openFiles (title:String, separator:String = null) : Array<String>
+		return DESwitcher.callDialog(DialogType.openFiles, [title, separator]);
 	
 	public static function saveDirectory (title:String) : String
 		return DESwitcher.callDialog(DialogType.saveDirectory, [title]);
+	
+	public static function openDirectory (title:String) : String
+		return DESwitcher.callDialog(DialogType.openDirectories, [title]);
+	
+	public static function openDirectories (title:String, separator:String = null) : Array<String>
+		return DESwitcher.callDialog(DialogType.openDirectories, [title, separator]);
 }
