@@ -1,6 +1,6 @@
 package rn.haxity.builders;
 
-import systoos.Dialogs;
+import systools.Dialogs;
 
 using StringTools;
 
@@ -18,15 +18,15 @@ class HaxeSystools {
 		return false;
 	
 	public static function saveFile (title:String) : String
-		return Dialogs.saveFile(title, "", Sys.getCwd(), []);
+		return Dialogs.saveFile(title, "", Sys.getCwd(), null);
 	
 	public static function openFile (title:String) : String {
-		var res:Array<String> = Systools.openFiles(title);
+		var res:Array<String> = HaxeSystools.openFiles(title, null);
 		return res == null ? null : res[0];
 	}
 	
 	public static function openFiles (title:String, separator:String) : Array<String>
-		return Dialogs.saveFile(title, "", []);
+		return Dialogs.openFile(title, "", null);
 	
 	public static function saveDirectory (title:String) : String
 		return null;

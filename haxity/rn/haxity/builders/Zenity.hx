@@ -6,7 +6,7 @@ using StringTools;
 
 class Zenity {
 	public static var zenityPath:String = "zenity";
-	
+
 	public static function info (title:String, text:String, noWrap:Bool) : Void
 		new Process(Zenity.zenityPath, [
 			"--info",

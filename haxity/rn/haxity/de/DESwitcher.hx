@@ -1,15 +1,14 @@
 package rn.haxity.de;
 
-import rn.haxity.*;
-import rn.haxity.builders.*;
-
 import haxe.io.Path;
 import rn.typext.hlp.SysHelper;
+
+import rn.haxity.DialogType;
 
 using StringTools;
 
 class DESwitcher {
-	public static var currentDesktop:DEType = null;
+	public static var currDialogBuilder:Class<Dynamic> = null;
 	
 	public static function detectDE () : Void {
 		switch (Sys.systemName().toLowerCase()) {
@@ -21,28 +20,29 @@ class DESwitcher {
 				
 				switch (session.toLowerCase()) {
 					case "ubuntu", "mate", "gnome", "cinnamon", "lxde", "xfce":
-						Zenity.zenityPath = "/usr/bin/zenity";
-						DESwitcher.currentDesktop = DEType.Zenity;
+						rn.haxity.builders.Zenity.zenityPath = "/usr/bin/zenity";
+						DESwitcher.currDialogBuilder = rn.haxity.builders.Zenity;
 					case "kde":
-						DESwitcher.currentDesktop = DEType.Kdialog;
+						DESwitcher.currDialogBuilder = rn.haxity.builders.Kdialog;
 					case "":
-						DESwitcher.currentDesktop = DEType.Dialog;
+						DESwitcher.currDialogBuilder = rn.haxity.builders.Dialog;
 					default:
-						DESwitcher.currentDesktop = DEType.Unknown;
+						DESwitcher.currDialogBuilder = rn.haxity.builders.Unknown;
 				}
 			case "windows":
-				DESwitcher.currentDesktop = DEType.HaxeSystools;
+				//rn.haxity.builders.Zenity.zenityPath = Path.join([Sys.getEnv(SysHelper.getCpuArch() == 32 ? "programfiles" : "programfiles(x86)").replace("\\", "/"), "Zenity", "bin", "zenity.exe"]);
+				//DESwitcher.currDialogBuilder = rn.haxity.builders.Zenity;
+				
+				DESwitcher.currDialogBuilder = rn.haxity.builders.HaxeSystools;
 			default:
-				DESwitcher.currentDesktop = DEType.Unknown;
+				DESwitcher.currDialogBuilder = rn.haxity.builders.Unknown;
 		}
 	}
 	
 	public static function callDialog (dt:DialogType, args:Array<Dynamic>) : Dynamic {
-		if (DESwitcher.currentDesktop == null)
+		if (DESwitcher.currDialogBuilder == null)
 			DESwitcher.detectDE();
 		
-		var bldCls:Class<Dynamic> = Type.resolveClass('rn.haxity.builders.${Std.string(DESwitcher.currentDesktop)}');
-		
-		return Reflect.callMethod(bldCls, Reflect.field(bldCls, Std.string(dt)), args);
+		return Reflect.callMethod(DESwitcher.currDialogBuilder, Reflect.field(DESwitcher.currDialogBuilder, Std.string(dt)), args);
 	}
 }
