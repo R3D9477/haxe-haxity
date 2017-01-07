@@ -17,5 +17,5 @@ Haxe-library for building native dialogs.<br/>
 		* in future: [zenity](https://github.com/kvaps/zenity-windows/) after solution found for [issue](https://github.com/HaxeFoundation/haxe/issues/5929)
 
 ###Install:<br/>
-* first install needed packages and programs from upper list
+* first install needed packages and programs from [the list above](#haxity-uses)
 * then install [haxelib](https://lib.haxe.org/)-package `haxelib git haxity https://github.com/r3d9u11/haxe-haxity.git`
