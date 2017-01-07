@@ -13,9 +13,9 @@ comming soon...<br/>
 * Web
 	* Flash and HTML5: [openfl:FileReference](http://api.openfl.org/openfl/net/FileReference.html) and [openfl:FileFilter](http://api.openfl.org/openfl/net/FileFilter.html)
 * Windows
-	* Metro: [zenity](https://github.com/kvaps/zenity-windows/) or [haxe systools](https://github.com/waneck/systools)
-* Android
-	* ???
+	* Metro:
+		* temprorary: [haxe systools](https://github.com/waneck/systools)
+		* in future: [zenity](https://github.com/kvaps/zenity-windows/) after solution found for [issue](https://github.com/HaxeFoundation/haxe/issues/5929)
 
 ### Install:<br/>
 `haxelib git haxity https://github.com/r3d9u11/haxe-haxity.git`
