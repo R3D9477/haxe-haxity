@@ -13,7 +13,7 @@ comming soon...<br/>
 * Web
 	* [Flash](https://ru.wikipedia.org/wiki/Adobe_Flash) and [HTML5](https://en.wikipedia.org/wiki/HTML5): [openfl:FileReference](http://api.openfl.org/openfl/net/FileReference.html) and [openfl:FileFilter](http://api.openfl.org/openfl/net/FileFilter.html)
 * Windows
-	* Metro:
+	* [DWM](https://en.wikipedia.org/wiki/Desktop_Window_Manager):
 		* temprorary: [haxe systools](https://github.com/waneck/systools)
 		* in future: [zenity](https://github.com/kvaps/zenity-windows/) after solution found for [issue](https://github.com/HaxeFoundation/haxe/issues/5929)
 
