@@ -2,7 +2,6 @@ Haxity
 =========================
 
 Haxe-library for building native dialogs.<br/>
-comming soon...<br/>
 
 ###Haxity uses:<br/>
 
@@ -17,5 +16,5 @@ comming soon...<br/>
 		* temprorary: [haxe systools](https://github.com/waneck/systools)
 		* in future: [zenity](https://github.com/kvaps/zenity-windows/) after solution found for [issue](https://github.com/HaxeFoundation/haxe/issues/5929)
 
-### Install:<br/>
+###Install:<br/>
 `haxelib git haxity https://github.com/r3d9u11/haxe-haxity.git`
