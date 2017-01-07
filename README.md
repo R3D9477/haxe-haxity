@@ -1,7 +1,7 @@
 Haxity
 =========================
 
-Haxe-library for building native dialogs.<br/>
+[Haxe](https://haxe.org/)-library for building native dialogs.<br/>
 
 ###Haxity uses:<br/>
 
