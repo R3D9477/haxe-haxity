@@ -18,4 +18,4 @@ Haxe-library for building native dialogs.<br/>
 
 ###Install:<br/>
 * first install needed packages and programms from upper list
-* then install haxelib-package `haxelib git haxity https://github.com/r3d9u11/haxe-haxity.git`
+* then install [haxelib](https://lib.haxe.org/)-package `haxelib git haxity https://github.com/r3d9u11/haxe-haxity.git`
