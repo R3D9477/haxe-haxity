@@ -20,7 +20,7 @@ class Haxity {
 	
 	
 	public static dynamic function escPath (path:String) : String
-		return path.replace('\n', '').replace('\r', '').trim();
+		return path.replace("\n", "").replace("\r", "").trim();
 	
 	public static dynamic function escPaths (paths:Array<String>) : Array<String>
 		return paths.map(function (p:String) return Haxity.escPath(p));
