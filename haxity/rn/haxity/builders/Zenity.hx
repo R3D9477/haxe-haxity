@@ -64,7 +64,7 @@ class Zenity {
 		return new Process(Zenity.zenityPath, [
 			"--file-selection",
 			'--title="$title"'
-		]).stdout.readAll().toString().trim();
+		]).stdout.readAll().toString();
 	
 	public static function openFiles (title:String, separator:String) : Array<String>
 		return new Process(Zenity.zenityPath, [
@@ -72,7 +72,7 @@ class Zenity {
 			"--multiple",
 			'--title="$title"',
 			separator > "" ? '--separator="$separator"' : ""
-		]).stdout.readAll().toString().split(separator > "" ? separator : "|").map(function (f:String) return f.trim());
+		]).stdout.readAll().toString().split(separator > "" ? separator : "|");
 	
 	public static function saveDirectory (title:String) : String
 		return new Process(Zenity.zenityPath, [
@@ -87,7 +87,7 @@ class Zenity {
 			"--file-selection",
 			"--directory",
 			'--title="$title"'
-		]).stdout.readAll().toString().trim();
+		]).stdout.readAll().toString();
 	
 	public static function openDirectories (title:String, separator:String) : Array<String>
 		return new Process(Zenity.zenityPath, [
@@ -96,5 +96,5 @@ class Zenity {
 			"--directory",
 			'--title="$title"',
 			separator > "" ? '--separator="$separator"' : ""
-		]).stdout.readAll().toString().split(separator > "" ? separator : "|").map(function (f:String) return f.trim());
+		]).stdout.readAll().toString().split(separator > "" ? separator : "|");
 }
