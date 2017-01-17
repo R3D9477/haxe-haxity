@@ -28,7 +28,7 @@ class Haxity {
 		return DESwitcher.callDialog(DialogType.saveDirectory, [title]);
 	
 	public static function openDirectory (title:String) : String
-		return DESwitcher.callDialog(DialogType.openDirectories, [title]);
+		return DESwitcher.callDialog(DialogType.openDirectory, [title]);
 	
 	public static function openDirectories (title:String, separator:String = null) : Array<String>
 		return DESwitcher.callDialog(DialogType.openDirectories, [title, separator]);
