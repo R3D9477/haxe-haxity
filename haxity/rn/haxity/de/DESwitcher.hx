@@ -23,8 +23,10 @@ class DESwitcher {
 						rn.haxity.builders.Zenity.zenityPath = "/usr/bin/zenity";
 						DESwitcher.currDialogBuilder = rn.haxity.builders.Zenity;
 					case "kde":
+						//...
 						DESwitcher.currDialogBuilder = rn.haxity.builders.Kdialog;
 					case "":
+						//...
 						DESwitcher.currDialogBuilder = rn.haxity.builders.Dialog;
 					default:
 						DESwitcher.currDialogBuilder = rn.haxity.builders.Unknown;

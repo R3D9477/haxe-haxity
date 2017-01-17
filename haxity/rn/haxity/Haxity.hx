@@ -19,7 +19,7 @@ class Haxity {
 		return DESwitcher.callDialog(DialogType.saveFile, [title]);
 	
 	public static function openFile (title:String) : String
-		return DESwitcher.callDialog(DialogType.openFiles, [title]);
+		return DESwitcher.callDialog(DialogType.openFile, [title]);
 	
 	public static function openFiles (title:String, separator:String = null) : Array<String>
 		return DESwitcher.callDialog(DialogType.openFiles, [title, separator]);
