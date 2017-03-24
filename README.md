@@ -3,7 +3,7 @@ Haxity
 
 [Haxe](https://haxe.org/)-library for building native dialogs.<br/>
 
-###Haxity uses:<br/>
+### Haxity uses:<br/>
 
 * Linux
 	* [Gtk+](https://en.wikipedia.org/wiki/GTK%2B): [zenity](https://help.gnome.org/users/zenity/stable/)
@@ -16,6 +16,6 @@ Haxity
 		* temprorary: [haxe systools](https://github.com/waneck/systools)
 		* in future: [zenity](https://github.com/kvaps/zenity-windows/) after solution found for [issue](https://github.com/HaxeFoundation/haxe/issues/5929)
 
-###Install:<br/>
+### Install:<br/>
 * first install needed packages and programs from [the list above](#haxity-uses)
 * then install [haxelib](https://lib.haxe.org/)-package `haxelib git haxity https://github.com/r3d9u11/haxe-haxity.git`
